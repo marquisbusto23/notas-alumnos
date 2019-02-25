@@ -2,7 +2,114 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+
+<div id="app">
+    <div class="jumbotron">
+        <h3>Agregar alumno</h3>
+        <br />
+        <div class="row">
+            <label>Nombre:  </label>
+            <input type="text" v-model="calificacion.nombre" />
+            <label>Nota:  </label>
+            <input type="number" v-model="calificacion.nota" />
+            <button class="btn-danger" v-on:click="agregarcalificacion();">Agregar</button>
+        </div>
+    </div>
+   
+    <div class="jumbotron">
+        <div class="row">
+            <h5>Total Alumnos</h5>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Nota</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in Calificaciones">
+                        <td v-if=>{{item.nombre}}</td>
+                        <td v-if=>{{item.nota}}</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+
+        </div>
+    </div>
+
+    <div class="jumbotron">
+        <h5 style="color:forestgreen">Alumnos Aprobados</h5>
+
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Nota</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in Calificaciones">
+                        <td v-if="item.nota >= 6">{{item.nombre}}</td>
+                        <td v-if="item.nota >= 6">{{item.nota}}</td>
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+
+        </div>
+    </div>
+
+    <div class="jumbotron">
+        <h5 style="color:red">Alumnos Desaprobados</h5>
+
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Nota</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in OrdenarListas(Calificaciones)">
+                        <td v-if="item.nota < 6">{{item.nombre}}</td>
+                        <td v-if="item.nota < 6">{{item.nota}}</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+
+        </div>
+    </div>
+    <br />
+    <div class="jumbotron">
+        <div class="table">
+            <h4>Contador</h4>
+            <br />
+            <p>Nota 1: {{contador1}}</p>
+            <p>Nota 2: {{contador2}}</p>
+            <p>Nota 3: {{contador3}}</p>
+            <p>Nota 4: {{contador4}}</p>
+            <p>Nota 5: {{contador5}}</p>
+            <p>Nota 6: {{contador6}}</p>
+            <p>Nota 7: {{contador7}}</p>
+            <p>Nota 8: {{contador8}}</p>
+            <p>Nota 9: {{contador9}}</p>
+            <p>Nota 10: {{contador10}}</p>
+        </div>
+    </div>
 </div>
