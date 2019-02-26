@@ -35,48 +35,38 @@
                 case 1:
                     this.contador1 = this.contador1 + 1;
                     break;         
-            };
-            switch (this.calificacion.nota) {
+            
                 case 2:
                     this.contador2 = this.contador2 + 1;
                     break;
-            };
-            switch (this.calificacion.nota) {
+           
                 case 3:
                     this.contador3 = this.contador3 + 1;
-                    break;
-            };
-            switch (this.calificacion.nota) {
+            
                 case 4:
                     this.contador4 = this.contador4 + 1;
                     break;
-            };
-            switch (this.calificacion.nota) {
+           
                 case 5:
                     this.contador5 = this.contador5 + 1;
                     break;
-            };
-            switch (this.calificacion.nota) {
+            
                 case 6:
                     this.contador6 = this.contador6 + 1;
                     break;
-            };
-            switch (this.calificacion.nota) {
+            
                 case 7:
                     this.contador7 = this.contador7 + 1;
                     break;
-            };
-            switch (this.calificacion.nota) {
+            
                 case 8:
                     this.contador8 = this.contador8 + 1;
                     break;
-            };
-            switch (this.calificacion.nota) {
+            
                 case 9:
                     this.contador9 = this.contador9 + 1;
                     break;
-            };
-            switch (this.calificacion.nota) {
+            
                 case 10:
                     this.contador10 = this.contador10 + 1;
                     break;
