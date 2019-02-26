@@ -12,7 +12,7 @@
             <label>Nombre:  </label>
             <input type="text" v-model="calificacion.nombre" />
             <label>Nota:  </label>
-            <input type="number" v-model="calificacion.nota" />
+            <input type="number" min="1" max="10" v-model="calificacion.nota" />
             <button class="btn-danger" v-on:click="agregarcalificacion();">Agregar</button>
         </div>
     </div>
@@ -29,8 +29,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="item in Calificaciones">
-                        <td v-if=>{{item.nombre}}</td>
+                    <tr v-for="(item, index) in Calificaciones">
+                        <td v-if=>{{index + 1}} - {{item.nombre}}</td>
                         <td v-if=>{{item.nota}}</td>
 
                     </tr>
